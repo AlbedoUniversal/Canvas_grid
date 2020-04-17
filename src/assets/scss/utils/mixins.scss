@@ -1,0 +1,59 @@
+// миксин, с помощью которого указываем размер таким образом --->
+// size(100%, 50px) или просто size(100%), тогда он туда и туда пойдет
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+@mixin plaxeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  ::-ms-input-placeholder {
+    @content;
+  }
+}
+
+@keyframes box-shadowUUU {
+  90% {
+    box-shadow: 0px -1px 20px 10px rgb(185, 110, 46);
+  }
+  100% {
+    box-shadow: 0px -1px 20px 3px rgb(185, 110, 46);
+  }
+  90% {
+    box-shadow: 0px -1px 20px 10px rgb(185, 110, 46);
+  }
+}
+
+@keyframes allHeading {
+  0% {
+    background-position: left 0 top 0;
+  }
+
+  50% {
+    background-position: left 200px top 0;
+  }
+
+  100% {
+    background-position: left 0 top 0;
+  }
+}

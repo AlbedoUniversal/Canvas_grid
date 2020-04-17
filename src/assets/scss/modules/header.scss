@@ -1,0 +1,29 @@
+.header {
+  height: 200px;
+  width: 100%;
+  background: linear-gradient(180deg, #000000, #1e1e1e 101.71%);
+  padding-top: 2em;
+  .container {
+    display: flex;
+    justify-content: space-around;
+    .header-tittle {
+      &__heading {
+        font-family: Airfool;
+        color: rgba(255, 255, 255, 0.2);
+        background-image: url(../img/star.jpg);
+        -webkit-background-clip: text;
+        animation: allHeading 16s infinite;
+        animation-direction: reverse;
+        font-size: 3em;
+        @media screen and (max-width: 768px) {
+          font-size: 1.9em;
+        }
+      }
+    }
+    .header-contact {
+      &__btn {
+        color: green;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.grid {
+  padding-top: 4em;
+  background: linear-gradient(0deg, #66c581, #1e1e1e 98.71%);
+
+  .container {
+    // background-color: blue;
+    padding: 0 20px;
+    .example-grid {
+      // background-color: red;
+      display: grid;
+      // grid-auto-flow: column; // по умолчанию стоит row, но теперь нумерация идет по колонке
+      grid-template-columns: 1fr 1fr 1fr 1fr; //оно отвечает за колоночки
+      // grid-template-columns: repeat(
+      //   auto-fit,
+      //   minmax(180px, 1fr)
+      // ); // аналогична записи первой строки - просто короче minmax (от ста до 200 пикселей)
+      // grid-template-rows: repeat(
+      //   3,
+      //   1fr
+      // ); //отвечает за ряды индивидуально по рядам
+      grid-auto-rows: 150px; // сразу все; растягивает насколько угодно
+      grid-column-gap: 10px; // аналогично
+      grid-row-gap: 20px; // аналогично
+      // grid-gap: 30px;
+
+      // justify-items: strech; // глобальные штучки - center. strech - по умолчанию, start, end
+      // align-items: strech;
+      .example-grid__item {
+        background-color: rgba(255, 255, 0, 0.548);
+        border: 5px solid black;
+        border-radius: 4px;
+        svg {
+          height: auto;
+          width: 20%;
+          display: block;
+          transform: translateY(-50%);
+        }
+        &:nth-child(1) {
+          grid-column: 1/3; // вспоминаем урок, где выбираем откуда и докуда будет ячейка занимать место - помним, что -1 это конец, а на всю длинну 1/-1
+          grid-row: 1/3;
+        }
+        &:nth-child(8) {
+          grid-column: 3/5;
+          grid-row: 3/5;
+        }
+        @media screen and (max-width: 768px) {
+          &:nth-child(1),
+          &:nth-child(8) {
+            grid-row: auto;
+            grid-column: auto;
+          }
+        }
+      }
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+      }
+    }
+  }
+}

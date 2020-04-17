@@ -1,0 +1,59 @@
+extends ../layout/main 
+
+block variables
+  - var pageClass = 'index-page';
+
+block content 
+  section(class="animate-demonstration")
+    .container
+      img.container__robot(src="../assets/img/robot.png", alt="robot")
+      canvas
+  section(class="grid")
+    .container
+      .example-grid
+        .example-grid__item
+          h3(class="example-grid__item-heading") 1
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!
+          svg(width="578" height="535" viewBox="0 0 578 535" fill="none" xmlns="http://www.w3.org/2000/svg")
+           g(transform="translate(350 350)")
+            path(d="M32.5 299C170 505 328 339.496 326.5 165.496C335.167 273.663 358.6 484.795 383 463.995C413.5 437.995 464 370.995 532.5 489.995C601 608.995 591.5 456.5 442.5 148C293.5 -160.5 -105 93 32.5 299Z" stroke="black" stroke-width="8")
+            animate(dur="1s" repeatCount="indefinite" attributeName="d" values="M0, -100 L0 0 L-30 75 M0 0 L30 75; M0,-150 L0 -50 L-10 30 M0 -50 L10 30; M0,-175 L0 -75 L-10 10 M0 -75 L10 10; M0, -100 L0 0 L-30 75 M0 0 L30 75")
+        .example-grid__item
+          h3(class="example-grid__item-heading") 2
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!
+        .example-grid__item
+          h3(class="example-grid__item-heading") 3
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!
+        .example-grid__item
+          h3(class="example-grid__item-heading") 4
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!
+        .example-grid__item
+          h3(class="example-grid__item-heading") 5
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!
+        .example-grid__item
+          h3(class="example-grid__item-heading") 6
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!
+        .example-grid__item
+          h3(class="example-grid__item-heading") 7
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!
+        .example-grid__item
+          h3(class="example-grid__item-heading") 8
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!
+        .example-grid__item
+          h3(class="example-grid__item-heading") 9
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!
+        .example-grid__item
+          h3(class="example-grid__item-heading") 10
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!0
+        .example-grid__item
+          h3(class="example-grid__item-heading") 11
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!1
+        .example-grid__item
+          h3(class="example-grid__item-heading") 12
+          p(class="example-grid__item-description") здравствуй - я тренируюсь!2
+  section(class="slider")
+    .container
+      
+
+
+  
